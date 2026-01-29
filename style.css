@@ -1,56 +1,43 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
 }
 
-
-#i{
+.header{
     background-color: aquamarine;
-    text-align: center;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#i span {
+.header h1{
     flex-grow: 1;
+    text-align: center;
 }
 
-#i img{
+.header img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
-.logo-left {
-    margin-right: auto;
-}
-
-.logo-right {
-    margin-left: auto;
-}
-
-#n{
+nav{
     background-color: lightgrey;
     text-align: center;
     padding: 10px;
 }
 
-#n a{
+nav a{
     padding: 5px 10px;
-    display: inline-block;
+    text-decoration: none;
 }
 
-/* Hide checkbox */
-#menu-toggle {
+#menu{
     display: none;
 }
 
-/* Hamburger Menu */
-.hamburger {
+.menu-btn{
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -58,66 +45,51 @@
     background-color: lightgrey;
 }
 
-.hamburger span {
+.menu-btn span{
     width: 25px;
     height: 3px;
     background-color: #333;
     margin: 3px 0;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    #n {
-        display: none;
-    }
-    
-    /* Show menu when checkbox is checked */
-    #menu-toggle:checked ~ #n {
-        display: block;
-    }
-    
-    #n a {
-        display: block;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-    
-    #i {
-        font-size: 1.2em;
-    }
-    
-    #i img {
-        max-width: 35px;
-    }
-}
-
-/* Make content responsive */
-p {
+p{
     padding: 20px;
     line-height: 1.6;
     text-align: justify;
 }
 
-img {
+img{
     max-width: 100%;
     height: auto;
 }
 
-div {
+div{
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-    p {
-        padding: 10px;
-        font-size: 0.9em;
+@media (max-width: 768px){
+    .menu-btn{
+        display: flex;
     }
-    
-    div {
+    nav{
+        display: none;
+    }
+    #menu:checked ~ nav{
+        display: block;
+    }
+    nav a{
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .header{
+        font-size: 1.2em;
+    }
+    .header img{
+        width: 35px;
+        height: 35px;
+    }
+    p, div{
         padding: 10px;
         font-size: 0.9em;
     }
